@@ -1571,29 +1571,6 @@ nav a:focus {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: "";
-	display: table;
-	table-layout: fixed;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-content:after,
-.site-footer:after {
-	clear: both;
-}
-
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -1606,12 +1583,25 @@ nav a:focus {
 
 @media screen and (min-width: 600px) {
 	.site-content {
-		padding: 2em;
+		padding: 1em;
 	}
 }
 
-.project-list {
-	border: 5px solid black;
+.site-content {
+	margin: 0 0;
+}
+
+.content-area {
+	width: 60%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 4em;
+}
+
+.widget-area {
+	width: 25%;
+	display: inline-block;
+	vertical-align: top;
 }
 
 /*--------------------------------------------------------------

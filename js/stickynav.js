@@ -1,7 +1,7 @@
 (function($) {
 // Sticky Header
 
-var $navbar = $(".sticky-nav"),
+var $navbar = $(".main_h"),
 y_pos = $navbar.offset().top;
 
 $(window).scroll(function() {
