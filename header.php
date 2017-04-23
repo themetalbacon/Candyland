@@ -34,22 +34,29 @@
 	</div>
 	<?php endif; // End header image check. ?>
 
-		<header class="main_h">
-			<div class="row">
-	        <a class="logo" href="#">P/F</a>
-
-	        <div class="mobile-toggle">
-	            <span></span>
-	            <span></span>
-	            <span></span>
-	        </div>
-
-	        <nav class="sticky-nav">
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-					</nav>
-
-	    </div> <!-- / row -->
-	</header>
+	<nav id="ygsnav" class="navbar navbar-default" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="#">Brand</a>
+	  </div>
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	  <div class="collapse navbar-collapse navbar-ex1-collapse">
+			<?php
+			wp_nav_menu( array
+			(
+			'container' => false,
+			'menu_class' => 'nav navbar-nav navbar-right',
+			'theme_location' => 'primary',
+			'menu_id' => 'primary-menu' ) );
+			?>
+	  </div>
+	</nav>
 
 
 	<div id="content" class="site-content">

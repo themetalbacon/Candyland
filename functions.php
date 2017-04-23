@@ -44,7 +44,7 @@ function candyland_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'candyland' ),
+		'primary' => esc_html__( 'Primary', 'candyland' ),
 	) );
 
 	/*
@@ -112,6 +112,8 @@ function candyland_scripts() {
 	wp_enqueue_script( 'candyland-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'candyland-stickynav', get_template_directory_uri() . '/js/stickynav.js', array('jquery'), '20151215', true );
+
+	wp_enqueue_script( 'candyland-bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

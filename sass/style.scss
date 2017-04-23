@@ -1,14 +1,13 @@
 /*!
-Theme Name: Humescores
+Theme Name: Candyland
 Theme URI: http://underscores.me/
-Author: Morten Rand-Hendriksen
-Author URI: https://mor10.com/courses
-Description: An awsome new Humescores-based theme!
+Author: Kiri
+Author URI:
+Description: YG Scans first theme
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: humescores
-Tags:
+
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -58,7 +57,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-@import "elements/elements";
+// @import "elements/elements";
 
 /*--------------------------------------------------------------
 # Forms
@@ -68,7 +67,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-@import "navigation/navigation";
+// @import "navigation/navigation";
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -104,3 +103,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+
+/*--------------------------------------------------------------
+# Boostrap
+--------------------------------------------------------------*/
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/bootstrap-theme';

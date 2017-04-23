@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="position:relative">
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
@@ -24,6 +24,9 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
+		<div></div>
+		<div class="flag">Date goes here</div>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
