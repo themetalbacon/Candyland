@@ -57,7 +57,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-// @import "elements/elements";
+@import "elements/elements";
 
 /*--------------------------------------------------------------
 # Forms
@@ -67,7 +67,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-// @import "navigation/navigation";
+@import "navigation/navigation";
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -97,7 +97,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
-@import "modules/infinite-scroll";
+//@import "modules/infinite-scroll";
 
 /*--------------------------------------------------------------
 # Media
