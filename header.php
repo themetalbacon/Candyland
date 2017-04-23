@@ -34,33 +34,22 @@
 	</div>
 	<?php endif; // End header image check. ?>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
+		<header class="main_h">
+			<div class="row">
+	        <a class="logo" href="#">P/F</a>
 
-			<?php the_custom_logo() ; ?>
+	        <div class="mobile-toggle">
+	            <span></span>
+	            <span></span>
+	            <span></span>
+	        </div>
 
-			<div class=site-branding__text>
+	        <nav class="sticky-nav">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</nav>
 
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+	    </div> <!-- / row -->
+	</header>
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'humescores' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
