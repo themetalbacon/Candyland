@@ -1,15 +1,16 @@
 .site-content {
-	padding: 1em;
+	padding: 1em 2em;
 
 	@media screen and (min-width: $query__small) {
 		padding: 2em;
+		padding-left: 10em;
+
 
 	}
 }
 
 .site-content {
-	margin: 0 2em;
-	margin-left: 8em;
+	background-color: rgba(255, 204, 0, 0.21);
 }
 
 .content-area {

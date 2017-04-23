@@ -1,12 +1,16 @@
 (function($) {
 // Sticky Header
 
-var $navbar = $("#ygsnav"),
-y_pos = $navbar.offset().top;
+var $header = $(".header-container"),
+$navbar = $("#ygsnav"),
+y_top = $header.height();
+
+$(window).resize(function() {
+  y_top = $header.height();
+})
 
 $(window).scroll(function() {
-
-    if ($(window).scrollTop() > y_pos) {
+    if ($(window).scrollTop() > y_top) {
         $navbar.addClass('navbar-fixed-top')
     } else {
         $navbar.removeClass('navbar-fixed-top');
