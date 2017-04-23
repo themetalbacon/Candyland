@@ -9,7 +9,8 @@ html {
 }
 
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	background-color: '$color__background-body'; /* Fallback for when there is no custom background color defined. */
+
 }
 
 blockquote, q {
@@ -36,7 +37,7 @@ img {
 }
 
 figure {
-	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+	margin: 0 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
 @import "tables";
