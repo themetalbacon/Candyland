@@ -24,13 +24,11 @@
 <div id="page" class="site">
 
 	<?php if ( is_front_page()) : ?>
-	<div style="position: relative;" class="header-container">
+	<div style="position: relative;">
 		<figure class="header-image">
 			<img src="http://svgshare.com/i/1J2.svg" alt="">
 		</figure>
-		<div style="position: absolute;">
 			<?php echo file_get_contents("./wp-content/themes/candyland/images/logosvg.svg"); ?>
-		</div>
 	</div>
 	<?php endif; // End header image check. ?>
 
@@ -50,7 +48,6 @@
 			<?php
 			wp_nav_menu( array
 			(
-			'container' => '',
 			'menu_class' => 'nav navbar-nav navbar-right',
 			'theme_location' => 'primary',
 			'menu_id' => 'primary-menu' ) );

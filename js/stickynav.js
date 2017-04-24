@@ -1,7 +1,7 @@
 (function($) {
 // Sticky Header
 
-var $header = $(".header-container"),
+var $header = $(".header-image"),
 $navbar = $("#ygsnav"),
 y_top = $header.height();
 
