@@ -40,7 +40,7 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			wp_pagenavi();
 
 		else :
 
@@ -53,4 +53,6 @@ get_header(); ?>
 
 <?php
 get_sidebar();
+
+
 get_footer();

@@ -25,7 +25,7 @@
 		<?php
 		endif; ?>
 		<div></div>
-		<div class="flag">Date goes here</div>
+		<div class="flag"><?php the_time('M, d') ?><br><?php the_time('Y') ?></div>
 
 	</header><!-- .entry-header -->
 

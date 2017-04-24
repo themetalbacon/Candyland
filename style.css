@@ -1480,6 +1480,35 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+## Page navi
+--------------------------------------------------------------*/
+/*
+Default style for WP-PageNavi plugin
+
+http://wordpress.org/extend/plugins/wp-pagenavi/
+*/
+.wp-pagenavi {
+	clear: both;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+	color: #FFF;
+	text-decoration: none;
+	background-color: #6FB7E9;
+	border: 1px solid #B2D1E5;
+	padding: 5px 5px;
+	margin: 2px;
+}
+
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+	border-color: #000;
+}
+
+.wp-pagenavi span.current {
+	font-weight: bold;
+}
+
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
