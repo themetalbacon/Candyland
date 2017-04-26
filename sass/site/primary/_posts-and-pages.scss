@@ -41,34 +41,88 @@
 div.flag {
 	position:absolute; left:-70px; top:20px; width: 70px; height:70px;
 }
+
+.flag {
+	padding-top:0.4em;
+	text-align: center;
+	font-family: 'Oswald';
+	font-size: 1.7em;
+	line-height:1em;
+
+	.year {
+		font-size: 0.8em;
+	}
+}
+
+
 .site-main article:nth-of-type(4n+1) {
+	border-top: 20px solid #ef6588;
 	border-bottom: 4px solid #ef6588;
+
+	@media screen and (min-width: $query__small) {
+		border-top: 0px;
+	}
+
 	.flag {
 		background-color: #ef6588;
-		// border-top: 30px solid #ef6588;
+		visibility: hidden;
+
+		@media screen and (min-width: $query__small) {
+			visibility: visible;
+		}
 	}
+
 }
 
 .site-main article:nth-of-type(4n+2) {
+	border-top: 20px solid #ffc44a;
 	border-bottom: 4px solid #ffc44a;
+
+	@media screen and (min-width: $query__small) {
+		border-top: 0px;
+	}
+
 	.flag {
 		background-color: #ffc44a;
-		// border-top: 30px solid #ef6588;
+		visibility: collapse;
+		@media screen and (min-width: $query__small) {
+			visibility: visible;
+		}
 	}
+
+
 }
 
 .site-main article:nth-of-type(4n+3) {
-	border-bottom: 4px solid #00d5ad;;
-	.flag {
-		background-color: #00d5ad;;
-		// border-top: 30px solid #ef6588;
+	border-bottom: 29px solid #00d5ad;
+	border-bottom: 4px solid #00d5ad;
+
+	@media screen and (min-width: $query__small) {
+		border-top: 0px;
 	}
+
+	.flag {
+		background-color: #00d5ad;
+		visibility: hidden;
+		@media screen and (min-width: $query__small) {
+			visibility: visible;
+		}
+	}
+
 }
 
 .site-main article:nth-of-type(4n+0) {
+	border-top: 20px solid #94d0ea;
 	border-bottom: 4px solid #94d0ea;
+
+	@media screen and (min-width: $query__small) {
+		border-top: 0px;
+	}
 	.flag {
 		background-color: #94d0ea;
-		// border-top: 30px solid #ef6588;
+		visibility: hidden;
+		@media screen and (min-width: $query__small) {
+			visibility: visible;
+		}
 	}
 }

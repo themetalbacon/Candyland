@@ -27,3 +27,18 @@ h5 {
 h6 {
 	font-size: 1.6em;
 }
+
+.entry-title{
+	font-family: $font__merriweather;
+	line-height: 1em;
+	a {
+	  color: #000;
+	  text-decoration: none;
+	}
+	a:hover,
+	a:focus {
+		color: #000;
+		text-decoration: underline;
+	}
+
+}

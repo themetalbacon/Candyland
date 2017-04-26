@@ -2412,6 +2412,16 @@ tbody.collapse.in {
   top: 0;
   border-width: 0 0 1px;
 }
+
+.admin-bar .navbar-fixed-top  {
+  top: 46px;
+}
+@media screen and (min-width: 783px) {
+  .admin-bar .navbar-fixed-top  {
+    top: 32px;
+  }
+}
+
 .navbar-fixed-bottom {
   bottom: 0;
   margin-bottom: 0;

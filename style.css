@@ -264,7 +264,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: "PT Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+	font-family: "Merriweather", Georgia, Cambria, "Times New Roman", Times, serif;
 	font-size: 18px;
 	font-size: 1.125rem;
 	line-height: 1.5;
@@ -309,6 +309,22 @@ h5 {
 
 h6 {
 	font-size: 1.6em;
+}
+
+.entry-title {
+	font-family: "Merriweather", Georgia, Cambria, "Times New Roman", Times, serif;
+	line-height: 1em;
+}
+
+.entry-title a {
+	color: #000;
+	text-decoration: none;
+}
+
+.entry-title a:hover,
+.entry-title a:focus {
+	color: #000;
+	text-decoration: underline;
 }
 
 p {
@@ -1578,31 +1594,50 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
 ## Global Layouts
 --------------------------------------------------------------*/
 .site-content {
-	padding: 1em 2em;
+	background-color: rgba(255, 204, 0, 0.21);
+	padding: 2em;
+	padding-left: 4em;
 }
 
 @media screen and (min-width: 600px) {
 	.site-content {
-		padding: 2em;
+		padding-left: 8em;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.site-content {
 		padding-left: 10em;
 	}
 }
 
-.site-content {
+.site-footer {
 	background-color: rgba(255, 204, 0, 0.21);
 }
 
 .content-area {
-	width: 60%;
-	margin-right: 7em;
+	width: 90%;
 	display: inline-block;
 	vertical-align: top;
 }
 
+@media screen and (min-width: 900px) {
+	.content-area {
+		margin-right: 6em;
+		width: 60%;
+	}
+}
+
 .widget-area {
-	width: 25%;
+	width: 90%;
 	display: inline-block;
 	vertical-align: top;
+}
+
+@media screen and (min-width: 900px) {
+	.widget-area {
+		width: 25%;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1756,6 +1791,36 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
 	-webkit-transform: rotate(-90deg);
 }
 
+/* transition effects */
+a#it-text {
+	font-size: 2em;
+	color: rgba(255, 255, 255, 0.1);
+	font-family: 'Titan One', cursive;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+	background: -webkit-linear-gradient(left, rgba(105, 94, 127, 0.54) 0%, rgba(255, 92, 92, 0.57) 15%, rgba(255, 160, 17, 0.59) 27%, rgba(252, 236, 93, 0.61) 37%, rgba(255, 229, 145, 0.63) 46%, rgba(111, 196, 173, 0.65) 58%, rgba(106, 132, 186, 0.67) 69%, rgba(209, 119, 195, 0.69) 79%, rgba(216, 213, 125, 0.7) 89%, rgba(216, 213, 125, 0.72) 100%), -webkit-repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.5), transparent 20px, rgba(255, 255, 255, 0.3) 40px);
+	background: -webkit-linear-gradient(left, rgba(105, 94, 127, 0.54) 0%, rgba(255, 92, 92, 0.57) 15%, rgba(255, 160, 17, 0.59) 27%, rgba(252, 236, 93, 0.61) 37%, rgba(255, 229, 145, 0.63) 46%, rgba(111, 196, 173, 0.65) 58%, rgba(106, 132, 186, 0.67) 69%, rgba(209, 119, 195, 0.69) 79%, rgba(216, 213, 125, 0.7) 89%, rgba(216, 213, 125, 0.72) 100%), -webkit-repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent 20px, rgba(255, 255, 255, 0.3) 40px);
+	background: linear-gradient(left, rgba(105, 94, 127, 0.54) 0%, rgba(255, 92, 92, 0.57) 15%, rgba(255, 160, 17, 0.59) 27%, rgba(252, 236, 93, 0.61) 37%, rgba(255, 229, 145, 0.63) 46%, rgba(111, 196, 173, 0.65) 58%, rgba(106, 132, 186, 0.67) 69%, rgba(209, 119, 195, 0.69) 79%, rgba(216, 213, 125, 0.7) 89%, rgba(216, 213, 125, 0.72) 100%), repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.5), transparent 20px, rgba(255, 255, 255, 0.3) 40px);
+	background-size: 300% 100%;
+	background-position: center left, top left;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-transition: all 0.7s linear;
+	transition: all 0.7s linear;
+	-moz-border-radius: 90px 15px;
+	-moz-box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.4);
+}
+
+a#it-text:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a#it-text.it-animate {
+	background-position: center right, top right;
+	color: rgba(39, 137, 149, 0.5);
+	-moz-box-shadow: 0px 0px 0px 10px rgba(39, 137, 149, 0.9);
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -1807,36 +1872,104 @@ div.flag {
 	height: 70px;
 }
 
+.flag {
+	padding-top: 0.4em;
+	text-align: center;
+	font-family: 'Oswald';
+	font-size: 1.7em;
+	line-height: 1em;
+}
+
+.flag .year {
+	font-size: 0.8em;
+}
+
 .site-main article:nth-of-type(4n+1) {
+	border-top: 20px solid #ef6588;
 	border-bottom: 4px solid #ef6588;
+}
+
+@media screen and (min-width: 600px) {
+	.site-main article:nth-of-type(4n+1) {
+		border-top: 0px;
+	}
 }
 
 .site-main article:nth-of-type(4n+1) .flag {
 	background-color: #ef6588;
+	visibility: hidden;
+}
+
+@media screen and (min-width: 600px) {
+	.site-main article:nth-of-type(4n+1) .flag {
+		visibility: visible;
+	}
 }
 
 .site-main article:nth-of-type(4n+2) {
+	border-top: 20px solid #ffc44a;
 	border-bottom: 4px solid #ffc44a;
+}
+
+@media screen and (min-width: 600px) {
+	.site-main article:nth-of-type(4n+2) {
+		border-top: 0px;
+	}
 }
 
 .site-main article:nth-of-type(4n+2) .flag {
 	background-color: #ffc44a;
+	visibility: collapse;
+}
+
+@media screen and (min-width: 600px) {
+	.site-main article:nth-of-type(4n+2) .flag {
+		visibility: visible;
+	}
 }
 
 .site-main article:nth-of-type(4n+3) {
+	border-bottom: 29px solid #00d5ad;
 	border-bottom: 4px solid #00d5ad;
+}
+
+@media screen and (min-width: 600px) {
+	.site-main article:nth-of-type(4n+3) {
+		border-top: 0px;
+	}
 }
 
 .site-main article:nth-of-type(4n+3) .flag {
 	background-color: #00d5ad;
+	visibility: hidden;
+}
+
+@media screen and (min-width: 600px) {
+	.site-main article:nth-of-type(4n+3) .flag {
+		visibility: visible;
+	}
 }
 
 .site-main article:nth-of-type(4n+0) {
+	border-top: 20px solid #94d0ea;
 	border-bottom: 4px solid #94d0ea;
+}
+
+@media screen and (min-width: 600px) {
+	.site-main article:nth-of-type(4n+0) {
+		border-top: 0px;
+	}
 }
 
 .site-main article:nth-of-type(4n+0) .flag {
 	background-color: #94d0ea;
+	visibility: hidden;
+}
+
+@media screen and (min-width: 600px) {
+	.site-main article:nth-of-type(4n+0) .flag {
+		visibility: visible;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -4683,6 +4816,16 @@ tbody.collapse.in {
 .navbar-fixed-top {
 	top: 0;
 	border-width: 0 0 1px;
+}
+
+.admin-bar .navbar-fixed-top {
+	top: 46px;
+}
+
+@media screen and (min-width: 783px) {
+	.admin-bar .navbar-fixed-top {
+		top: 32px;
+	}
 }
 
 .navbar-fixed-bottom {

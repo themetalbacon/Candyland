@@ -27,4 +27,16 @@ $('.navbar-toggle').click(function() {
 });
 
 
+// Nav hover
+  $('#it-text').hover( function() {
+    $('#it-text').toggleClass('it-animate');
+  },
+  function() {
+    $('#it-text').toggleClass('it-animate');
+  })
+
+
+
+
+
 })(jQuery, undefined);
