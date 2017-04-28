@@ -195,6 +195,16 @@ function candyland_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'candyland_scripts' );
 
+
+function remove_admin_bar() {
+	if (!current_user_can('administrator') && !is_admin()) {
+	  show_admin_bar(false);
+	}
+}
+add_action('after_setup_theme', 'remove_admin_bar');
+
+
+
 /**
  * Implement the Custom Header feature.
  */

@@ -37,6 +37,14 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
+			$mydb = new wpdb('mybb','123123','mybbdb','localhost');
+			$rows = $mydb->get_results("select username, usertitle from mybb_users");
+			echo "<ul>";
+			foreach ($rows as $obj) :
+			   echo "<li>".$obj->username, $obj->usertitle."</li>";
+			endforeach;
+			echo "</ul>";
+
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'candyland' ),
 				'after'  => '</div>',
