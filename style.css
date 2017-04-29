@@ -375,6 +375,10 @@ big {
 	font-size: 125%;
 }
 
+.icon-arrow-down-right:before {
+	content: "\ea35";
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -1791,6 +1795,23 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
 	-webkit-transform: rotate(-90deg);
 }
 
+#primary-menu {
+	font-family: 'Oswald', sans-serif;
+	color: #000000;
+	font-size: 1.3em;
+}
+
+@media screen and (min-width: 855px) {
+	#primary-menu {
+		font-size: 1.5em;
+	}
+}
+
+#primary-menu .current_page_item a {
+	color: #FFFFFF;
+	background-color: #bf5c92;
+}
+
 /* transition effects */
 a#it-text {
 	font-size: 2em;
@@ -1929,7 +1950,7 @@ div.flag {
 }
 
 .site-main article:nth-of-type(4n+3) {
-	border-bottom: 29px solid #00d5ad;
+	border-top: 29px solid #00d5ad;
 	border-bottom: 4px solid #00d5ad;
 }
 
@@ -1993,6 +2014,16 @@ div.flag {
 
 .widget select {
 	max-width: 100%;
+}
+
+#chatbox {
+	visibility: hidden;
+}
+
+@media screen and (min-width: 600px) {
+	#chatbox {
+		visibility: visible;
+	}
 }
 
 /*--------------------------------------------------------------

@@ -94,7 +94,7 @@ div.flag {
 }
 
 .site-main article:nth-of-type(4n+3) {
-	border-bottom: 29px solid #00d5ad;
+	border-top: 29px solid #00d5ad;
 	border-bottom: 4px solid #00d5ad;
 
 	@media screen and (min-width: $query__small) {

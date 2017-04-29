@@ -6,3 +6,12 @@
 		max-width: 100%;
 	}
 }
+
+
+#chatbox {
+		visibility: hidden;
+
+		@media screen and (min-width: $query__small) {
+			visibility: visible;
+		}
+}
