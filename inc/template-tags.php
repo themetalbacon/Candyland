@@ -25,8 +25,7 @@ function candyland_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'candyland' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+		esc_html_x( 'Posted on %s', 'post date', 'candyland' ), $time_string
 	);
 
 	$byline = sprintf(
@@ -44,37 +43,8 @@ if ( ! function_exists( 'candyland_entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function candyland_entry_footer() {
-	// Hide category and tag text for pages.
-	if ( 'post' === get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'candyland' ) );
-		if ( $categories_list && candyland_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'candyland' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
+	// Hide category and tag text for pages
 
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'candyland' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'candyland' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-		}
-	}
-
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'candyland' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
-		echo '</span>';
-	}
-
-	edit_post_link(
-		sprintf(
-			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'candyland' ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		),
-		'<span class="edit-link">',
-		'</span>'
-	);
 }
 endif;
 
@@ -120,3 +90,13 @@ function candyland_category_transient_flusher() {
 }
 add_action( 'edit_category', 'candyland_category_transient_flusher' );
 add_action( 'save_post',     'candyland_category_transient_flusher' );
+
+function candyland_excerpt_more( $more ) {
+	return "...";
+}
+add_filter('excerpt_more', 'candyland_excerpt_more');
+
+function candyland_excerpt_length( $length ) {
+	return 100;
+}
+add_filter('excerpt_length', 'candyland_excerpt_length');

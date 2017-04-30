@@ -1,0 +1,25 @@
+.tags-links ul,
+.cat-links ul {
+  margin:0px;
+}
+
+
+.cat-links li,
+.tags-links li{
+
+  display:inline-block;
+  letter-spacing: 2px;
+  font-family: 'Merriweather';
+
+  &:nth-child(n+2) {
+    &:before {
+      content:'•';
+      padding-right: 0.5em;
+      padding-left: 0.5em;
+    }
+  }
+   a {
+     color: #777777;
+   }
+
+}

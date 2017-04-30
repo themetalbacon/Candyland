@@ -9,8 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'index-post-page' ); ?> style="position:relative">
-
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'single-post-page'); ?> style="position:relative">
 
 	<!-- Title, posted on, comment, edit -->
 	<header class="entry-header">
@@ -40,27 +39,20 @@
 				'</span>'
 			); ?>
 
+
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
 		<div></div>
 
-		<div class="flag"><?php the_time('M') ?><br><?php the_time('d') ?></div>
-
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php $length_setting = get_theme_mod('length_setting');
-			the_excerpt();
-			// if ( 'excerpt' === $length_setting ) {
-			// 	the_excerpt();
-			// } else {
-			// 	the_content();
-			// }
-		?>
+		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 
-	<!-- Tags and Categories -->
+  <div class="entry-tags">
+  <!-- Tags and Categories -->
 	<?php if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list();
@@ -74,20 +66,7 @@
 			printf( '<span class="tags-links">' . esc_html__( '%1$s', 'candyland' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	} ?>
-
-	<div class="continue-reading">
-		<?php
-		$read_more_link = sprintf(
-			/* translators: %s: Name of current post. */
-			wp_kses( __( 'Read more %s', 'humescores' ), array( 'span' => array( 'class' => array() ) ) ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		);
-		?>
-
-		<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
-			<span class="icon icon-arrow-down-right"></span> <?php echo $read_more_link; ?>
-		</a>
-	</div><!-- .continue-reading -->
+</div>
 
 	<footer class="entry-footer">
 		<?php candyland_entry_footer(); ?>

@@ -23,6 +23,9 @@ if ( post_password_required() ) {
 <div id="comments" class="comments-area">
 
 	<?php
+
+	comment_form();
+
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) : ?>
 		<h2 class="comments-title">
@@ -50,8 +53,9 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
-					'style'      => 'ol',
+					'style'      => 'ul',
 					'short_ping' => true,
+					'avatar_size' => '96',
 				) );
 			?>
 		</ol><!-- .comment-list -->
@@ -79,7 +83,6 @@ if ( post_password_required() ) {
 	<?php
 	endif;
 
-	comment_form();
 	?>
 
 </div><!-- #comments -->
