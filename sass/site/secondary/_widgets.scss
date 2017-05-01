@@ -11,6 +11,10 @@
 #chatbox {
 		display:none;
 
+		@media only screen {
+			display:none;
+		}
+
 		@media screen and (min-width: $query__small) {
 			display: block;
 		}

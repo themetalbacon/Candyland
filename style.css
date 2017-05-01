@@ -1983,7 +1983,7 @@ http://wordpress.org/extend/plugins/wp-pagenavi/
 }
 
 #content {
-	animation-duration: 0.6;
+	animation-duration: 0.6s;
 	-moz-animation-duration: 0.6s;
 	-webkit-animation-duration: 0.6s;
 }
@@ -2117,6 +2117,7 @@ a#it-text.it-animate {
 
 .continue-reading a:hover {
 	text-decoration: none;
+	color: #000000;
 }
 
 .index-post-page {
@@ -2988,6 +2989,12 @@ figure.effect-oscar:hover img {
 
 #chatbox {
 	display: none;
+}
+
+@media only screen {
+	#chatbox {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 600px) {
