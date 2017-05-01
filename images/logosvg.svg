@@ -2,7 +2,7 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="width:60vw; height:60vh" viewBox="0 0 720 440" enable-background="new 0 0 720 440" xml:space="preserve" class="testcenter">
-<g id="Dots">
+<g id="Dots" class="animated slideInUp">
 	<g>
 		<path fill-rule="evenodd" clip-rule="evenodd" fill="#BF5C92" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="
 			M94.693,351.73c-7.219,1.295-12.014,5.223-14.515,11.301c-0.999,2.428-0.479,4.932-0.471,5.021
@@ -39,7 +39,7 @@
 			c0.639,3.428,1.49,6.826,2.58,10.199c1.4,4.328,3.105,8.562,5.658,12.516C610.686,414.535,612.805,416.979,615.688,418.658z"/>
 	</g>
 </g>
-<g id="Scanlations">
+<g id="Scanlations" class="animated slideInUp">
 	<g>
 		<path fill="#BF5C92" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M178.418,364.764
 			c1.585,1.887,2.811,4.039,3.68,6.455c0.867,2.416,1.189,4.832,0.963,7.246c-0.379,3.775-2.077,6.834-5.096,9.172
@@ -241,7 +241,7 @@
 			C589.135,357.809,589.494,359.971,589.797,362.158z"/>
 	</g>
 </g>
-<g id="Gummy_1_">
+<g id="Gummy_1_" class="animated slideInRight">
 	<g>
 		<g>
 			<g>
@@ -2258,7 +2258,7 @@ FZ78eayFrSn9W5rOnoz3WhGOp178ZwaCFxgam/QYYyoAxYfa+R8VCNC400cC4UMv/EcHwjOMI8Hn
 	<path opacity="0.6" fill="#FFFFFF" d="M100.914,117.854c1.807-0.049,4.824-1.652,3.61-3.977c-1.108-2.118-6.243-2.449-9.083-2.24
 		c-2.719,0.198-5.363,1.013-4.514,3.602C91.471,116.889,95.432,118.008,100.914,117.854z"/>
 </g>
-<g id="Yummy">
+<g id="Yummy" class="animated slideInLeft">
 	<g>
 		<path d="M225.856,13c0.474,0,0.95,0.026,1.426,0.079c2.393,0.255,4.349,1.134,5.865,2.647c1.513,1.517,2.709,3.344,3.593,5.487
 			c1.258,3.153,2.017,6.497,2.271,10.026c0.123,4.162-0.696,8.387-2.46,12.677c-1.373,3.427-3.038,6.698-4.98,9.819

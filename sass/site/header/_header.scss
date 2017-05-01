@@ -134,4 +134,10 @@
 	// border: 2px solid rgb(44,44,44);
 }
 
+#content {
+  animation-duration: 0.6s;
+	-moz-animation-duration: 0.6s;
+	-webkit-animation-duration: 0.6s;
+}
+
  @import "header-menu";

@@ -9,9 +9,9 @@
 
 
 #chatbox {
-		visibility: hidden;
+		display:none;
 
 		@media screen and (min-width: $query__small) {
-			visibility: visible;
+			display: block;
 		}
 }

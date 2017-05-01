@@ -23,7 +23,15 @@
 				color: #FFFFFF;
 				background-color: #bf5c92;
 			}
+		}
 
+		a {
+			-webkit-transition: background 0.3s;
+			transition: background 0.3s;
+
+			&:hover {
+				background-color: #bf5c92;
+			}
 		}
 
 }

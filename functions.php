@@ -179,7 +179,11 @@ add_action( 'widgets_init', 'candyland_widgets_init' );
 function candyland_scripts() {
 	wp_enqueue_style( 'candyland-fonts', 'https://fonts.googleapis.com/css?family=Bree+Serif|Chewy|Holtwood+One+SC|Josefin+Slab:400,700|Merriweather:400,700|Oswald|Titan+One' );
 
+	wp_enqueue_style( 'candyland-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons' );
+
 	wp_enqueue_style( 'candyland-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'candyland-animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
 
 	wp_enqueue_script( 'candyland-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

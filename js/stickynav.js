@@ -36,6 +36,13 @@ $('.navbar-toggle').click(function() {
   })
 
 
+  $('.cbutton').click(function(){
+    var $ele = $(this);
+    $ele.addClass("cbutton--click");
+    setTimeout(function(){
+      $ele.removeClass("cbutton--click");
+    }, 400);
+  });
 
 
 
