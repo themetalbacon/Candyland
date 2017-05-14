@@ -17,7 +17,6 @@
 }
 
 .apply_item {
-	border: 4px solid $color__blue;
 	position: relative;
 	display: -webkit-flex;
 	display: flex;
@@ -26,6 +25,30 @@
 	text-align: center;
 	-webkit-flex: 0 1 250px;
 	flex: 0 1 250px;
+
+	a, a:hover, a:focus {
+		color: black;
+	}
+
+	&.red {
+		border: 4px solid $color__red;
+	}
+
+	&.yellow {
+		border: 4px solid $color__yellow;
+	}
+
+	&.green {
+		border: 4px solid $color__green;
+	}
+
+	&.blue {
+		border: 4px solid $color__blue;
+	}
+
+	&.grey {
+		border: 4px solid $color__grey;
+	}
 }
 
 .apply_feature-list {
@@ -51,21 +74,83 @@
 	padding: 2em;
 	cursor: default;
 	border-radius: 10px;
-	background: $color__light-blue;
 	-webkit-transition: background 0.3s;
 	transition: background 0.3s;
+
+	&.red {
+		background: $color__light-red;
+		.apply_action {
+			border: 2px solid $color__red;
+		}
+		.apply_action:hover {
+			background: $color__red;
+		}
+	}
+
+	&.yellow {
+		background: $color__light-yellow;
+		.apply_action {
+			border: 2px solid $color__yellow;
+		}
+		.apply_action:hover {
+			background: $color__yellow;
+		}
+	}
+
+	&.green {
+		background: $color__light-green;
+		.apply_action {
+			border: 2px solid $color__green;
+		}
+		.apply_action:hover {
+			background: $color__green;
+		}
+	}
+
+	&.blue {
+		background: $color__light-blue;
+		.apply_action {
+			border: 2px solid $color__blue;
+		}
+		.apply_action:hover {
+			background: $color__blue;
+		}
+	}
+
+	&.grey {
+		background: $color__light-grey;
+		.apply_action {
+			border: 2px solid $color__grey;
+			background: $color__grey;
+		}
+		.apply_action:hover {
+			cursor: default;
+			background: $color__grey;
+		}
+	}
+
 }
 
-.apply-sonam .apply_item:hover {
-	background: #FFFFFF;
-	box-shadow: 0 5px 20px rgba(0,0,0,0.05), 0 15px 30px -10px rgba(0,0,0,0.3);
+.apply-sonam {
+	.red, .yellow, .green, .blue {
+		&.apply_item:hover {
+			background: #FFFFFF;
+			box-shadow: 0 5px 20px rgba(0,0,0,0.05), 0 15px 30px -10px rgba(0,0,0,0.3);
+		}
+	}
 }
+
+
 
 .apply-sonam .apply_title {
-	font-size: 2.6em;
+	font-size: 2.2em;
 	width: 100%;
 	margin: 0 0 0;
 	padding: 0 0 0;
+
+	@media screen and (min-width:$query__medium) {
+		font-size: 2.6em;
+	}
 }
 
 .apply-sonam .apply_price {
@@ -87,17 +172,12 @@
 	font-weight: bold;
 	margin-top: auto;
 	padding: 0.75em 2em;
-	border: 2px solid $color__blue;
 	border-radius: 40px;
 	background: #FFFFFF;
 	-webkit-transition: background 0.3s;
 	transition: background 0.3s;
 	box-shadow: none;
 	text-shadow: none;
-}
-
-.apply-sonam .apply_action:hover {
-	background: $color__blue;
 }
 
 
@@ -135,7 +215,6 @@
 
 .hi-icon:before {
 	font-family: 'icomoon';
-	color: $color__blue;
 	speak: none;
 	font-size: 20px;
 	font-style: normal;
@@ -152,6 +231,37 @@
 
 .hi-icon-cog:before {
   content: "\e900";
+}
+
+.red {
+	.hi-icon:before {
+		color: $color__red;
+	}
+}
+
+.yellow {
+	.hi-icon:before {
+		color: $color__yellow;
+	}
+}
+
+.green {
+	.hi-icon:before {
+		color: $color__green;
+	}
+}
+
+
+.blue{
+	.hi-icon:before {
+		color: $color__blue;
+	}
+}
+
+.grey{
+	.hi-icon:before {
+		color: black;
+	}
 }
 
 
@@ -218,16 +328,16 @@
 
 
 
-.cbutton--effect-radomir::after {
+.blue .cbutton--effect-radomir::after {
 	box-shadow: inset 0 0 0 35px rgba(111,148,182,0);
 }
 
-.cbutton--effect-radomir.cbutton--click::after {
-	-webkit-animation: anim-effect-radomir 0.5s ease-out forwards;
-	animation: anim-effect-radomir 0.5s ease-out forwards;
+.blue .cbutton--effect-radomir.cbutton--click::after {
+	-webkit-animation: anim-effect-radomir-blue 0.5s ease-out forwards;
+	animation: anim-effect-radomir-blue 0.5s ease-out forwards;
 }
 
-@-webkit-keyframes anim-effect-radomir {
+@-webkit-keyframes anim-effect-radomir-blue {
 	0% {
 		opacity: 1;
 		-webkit-transform: scale3d(0.4, 0.4, 1);
@@ -245,7 +355,7 @@
 	}
 }
 
-@keyframes anim-effect-radomir {
+@keyframes anim-effect-radomir-blue {
 	0% {
 		opacity: 1;
 		-webkit-transform: scale3d(0.4, 0.4, 1);
@@ -257,6 +367,142 @@
 	}
 	100% {
 		box-shadow: inset 0 0 0 2px rgba(111,148,182,0.8);
+		opacity: 0;
+		-webkit-transform: scale3d(1.2, 1.2, 1);
+		transform: scale3d(1.2, 1.2, 1);
+	}
+}
+
+
+.red .cbutton--effect-radomir::after {
+	box-shadow: inset 0 0 0 35px rgba(198, 45, 84, 0);
+}
+
+.red .cbutton--effect-radomir.cbutton--click::after {
+	-webkit-animation: anim-effect-radomir-red 0.5s ease-out forwards;
+	animation: anim-effect-radomir-red 0.5s ease-out forwards;
+}
+
+@-webkit-keyframes anim-effect-radomir-red {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.4, 0.4, 1);
+		transform: scale3d(0.4, 0.4, 1);
+	}
+	80% {
+		box-shadow: inset 0 0 0 2px rgba(198, 45, 84, 0.8);
+		opacity: 0.1;
+	}
+	100% {
+		box-shadow: inset 0 0 0 2px rgba(198, 45, 84, 0.8);
+		opacity: 0;
+		-webkit-transform: scale3d(1.2, 1.2, 1);
+		transform: scale3d(1.2, 1.2, 1);
+	}
+}
+
+@keyframes anim-effect-radomir-red {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.4, 0.4, 1);
+		transform: scale3d(0.4, 0.4, 1);
+	}
+	80% {
+		box-shadow: inset 0 0 0 2px rgba(198, 45, 84,0.8);
+		opacity: 0.1;
+	}
+	100% {
+		box-shadow: inset 0 0 0 2px rgba(198, 45, 84,0.8);
+		opacity: 0;
+		-webkit-transform: scale3d(1.2, 1.2, 1);
+		transform: scale3d(1.2, 1.2, 1);
+	}
+}
+
+.yellow .cbutton--effect-radomir::after {
+	box-shadow: inset 0 0 0 35px rgba(178, 128, 24, 0);
+}
+
+.yellow .cbutton--effect-radomir.cbutton--click::after {
+	-webkit-animation: anim-effect-radomir-yellow 0.5s ease-out forwards;
+	animation: anim-effect-radomir-yellow 0.5s ease-out forwards;
+}
+
+@-webkit-keyframes anim-effect-radomir-yellow {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.4, 0.4, 1);
+		transform: scale3d(0.4, 0.4, 1);
+	}
+	80% {
+		box-shadow: inset 0 0 0 2px rgba(178, 128, 24, 0.8);
+		opacity: 0.1;
+	}
+	100% {
+		box-shadow: inset 0 0 0 2px rgba(178, 128, 24, 0.8);
+		opacity: 0;
+		-webkit-transform: scale3d(1.2, 1.2, 1);
+		transform: scale3d(1.2, 1.2, 1);
+	}
+}
+
+@keyframes anim-effect-radomir-yellow {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.4, 0.4, 1);
+		transform: scale3d(0.4, 0.4, 1);
+	}
+	80% {
+		box-shadow: inset 0 0 0 2px rgba(178, 128, 24, 0.8);
+		opacity: 0.1;
+	}
+	100% {
+		box-shadow: inset 0 0 0 2px rgba(178, 128, 24, 0.8);
+		opacity: 0;
+		-webkit-transform: scale3d(1.2, 1.2, 1);
+		transform: scale3d(1.2, 1.2, 1);
+	}
+}
+
+.green .cbutton--effect-radomir::after {
+	box-shadow: inset 0 0 0 35px rgba(3, 122, 100, 0);
+}
+
+.green .cbutton--effect-radomir.cbutton--click::after {
+	-webkit-animation: anim-effect-radomir-green 0.5s ease-out forwards;
+	animation: anim-effect-radomir-green 0.5s ease-out forwards;
+}
+
+@-webkit-keyframes anim-effect-radomir-green {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.4, 0.4, 1);
+		transform: scale3d(0.4, 0.4, 1);
+	}
+	80% {
+		box-shadow: inset 0 0 0 2px rgba(3, 122, 100, 0.8);
+		opacity: 0.1;
+	}
+	100% {
+		box-shadow: inset 0 0 0 2px rgba(3, 122, 100, 0.8);
+		opacity: 0;
+		-webkit-transform: scale3d(1.2, 1.2, 1);
+		transform: scale3d(1.2, 1.2, 1);
+	}
+}
+
+@keyframes anim-effect-radomir-green {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale3d(0.4, 0.4, 1);
+		transform: scale3d(0.4, 0.4, 1);
+	}
+	80% {
+		box-shadow: inset 0 0 0 2px rgba(3, 122, 100, 0.8);
+		opacity: 0.1;
+	}
+	100% {
+		box-shadow: inset 0 0 0 2px rgba(3, 122, 100, 0.8);
 		opacity: 0;
 		-webkit-transform: scale3d(1.2, 1.2, 1);
 		transform: scale3d(1.2, 1.2, 1);

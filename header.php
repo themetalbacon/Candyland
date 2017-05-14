@@ -26,11 +26,11 @@
 	<?php if ( is_front_page()) : ?>
 	<div style="position: relative;">
 		<figure class="header-image">
-			<img src="http://svgshare.com/i/1J2.svg" alt="">
+			<img src="http://svgshare.com/i/1Tp.svg" alt="">
 		</figure>
 			<?php echo file_get_contents("./wp-content/themes/candyland/images/logosvg.svg"); ?>
 	</div>
-	<?php endif; // End header image check. ?>
+	<?php endif; // End header image check. http://svgshare.com/i/1J2.svg ?>
 
 	<nav id="ygsnav" class="navbar navbar-default" role="navigation">
 	<!-- Brand and toggle get grouped for better mobile display -->
@@ -51,7 +51,9 @@
 			(
 			'menu_class' => 'nav navbar-nav navbar-right',
 			'theme_location' => 'primary',
-			'menu_id' => 'primary-menu' ) );
+			'menu_id' => 'primary-menu',
+			'container' => '',
+			 ) );
 			?>
 	  </div>
 	</nav>

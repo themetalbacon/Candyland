@@ -1,0 +1,103 @@
+.button.button--shikoba {
+  position:relative;
+	padding: 1em 30px 1em 50px;
+	overflow: hidden;
+	background: #fff;
+	-webkit-transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+	transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  box-shadow: none;
+  border-radius: 0;
+
+  &.red {
+    border-color: $color__red;
+  }
+  &.yellow {
+    border-color: $color__yellow;
+  }
+  &.green {
+    border-color: $color__green;
+  }
+  &.blue {
+    border-color: $color__blue;
+  }
+  &.purple {
+    border-color: $color__purple;
+  }
+}
+
+.button--shikoba.button--inverted {
+	color: #fff;
+	background: #7986cb;
+}
+.button--shikoba {
+  a {
+    color: black;
+  }
+  a:hover, a:focus {
+    color: black;
+  }
+}
+.button--shikoba > span {
+	color: #000;
+	display: inline-block;
+	-webkit-transform: translate3d(-10px, 0, 0);
+	transform: translate3d(-10px, 0, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.button--shikoba .button__icon {
+	position: absolute;
+	left: 70%;
+  top: 0px;
+	font-size: 18px;
+	-webkit-transform: translate3d(0, -30px, 0);
+	transform: translate3d(0, -30px, 0);
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.button--shikoba:hover > span {
+	-webkit-transform: translate3d(-20px, 0, 0);
+	transform: translate3d(-20px, 0, 0);
+  text-shadow: none;
+}
+
+.button--shikoba:hover .button__icon {
+	-webkit-transform: translate3d(0, 0.8em, 0);
+	transform: translate3d(0, 0.8em, 0);
+  color: #fff;
+}
+
+.button--shikoba:hover {
+
+  box-shadow: none;
+
+  > span {
+    color: #fff;
+  }
+
+  &.red{
+    background: $color__red;
+    border-color: $color__red;
+  }
+  &.yellow{
+    background: $color__yellow;
+    border-color: $color__yellow;
+  }
+  &.green{
+    background: $color__green;
+    border-color: $color__green;
+  }
+  &.blue{
+    background: $color__blue;
+    border-color: $color__blue;
+  }
+  &.purple{
+    background: $color__purple;
+    border-color: $color__purple;
+  }
+}
